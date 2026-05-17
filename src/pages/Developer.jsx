@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-function Projects() {
+function Developer() {
   return (
     <section className="py-4">
       <Outlet />
@@ -8,4 +8,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Developer;
