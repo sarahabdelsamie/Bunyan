@@ -29,20 +29,24 @@ function Dashboard() {
 
             <Route path="/" element={<StatusPage />} />
 
+
             <Route path="/users" element={<Users />}>
-              <Route index element={<TableDashboard />} />
+              <Route index element={<TableDashboard name="Users" buttonname="Add New User" />} />
               <Route path="add" element={<FormDashboard />} />
             </Route>
+
 
             <Route path="/projects" element={<Projects />}>
-              <Route index element={<TableDashboard />} />
+              <Route index element={<TableDashboard name="Projects" buttonname="Add New Project" />} />
               <Route path="add" element={<FormDashboard />} />
             </Route>
 
-            <Route path="/developer" element={<Developer/>}>
-              <Route index element={<TableDashboard />} />
+
+            <Route path="/developer" element={<Developer />}>
+              <Route index element={<TableDashboard name="Developers" buttonname="Add New Developer" />} />
               <Route path="add" element={<FormDashboard />} />
             </Route>
+
 
           </Routes>
 
