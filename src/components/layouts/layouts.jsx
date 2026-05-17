@@ -8,10 +8,10 @@ export default function DashboardLayout() {
   return (
     <div style={{ display: "flex" }}>
       
-      {/* Sidebar */}
+      
       <Sidebar isDraft={isDraft} />
 
-      {/* صفحات الموقع */}
+     
       <div style={{ flex: 1 }}>
         <Outlet context={{ setIsDraft }} />
       </div>
