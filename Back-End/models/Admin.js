@@ -14,12 +14,13 @@ const adminSchema=new mongoose.Schema({
         type:String,
         required:[true,"Password Is Required"],
         minlength:6,
+        select:false,
     },
 
 },{timestamps:true});
 
-adminSchema.pre("save",async function (next) {
-    if (!this.isModified("passwoed")) return next();
+adminSchema.pre("save",async function () {
+    if (!this.isModified("passwoed")) return ;
     this.password=await bcrypt.hash(this.password,10);
     
 });
